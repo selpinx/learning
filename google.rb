@@ -5,7 +5,6 @@ require 'pry'
 browser = Watir::Browser.new :firefox
 browser.goto "http://translate.google.com/"
  
-# binding.pry
 language_button = browser.div(:id => "gt-sl-gms")
 language_button.when_present.click
  
