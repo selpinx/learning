@@ -1,7 +1,7 @@
 require 'watir-webdriver'
 require 'pry'
 
-
+#setup browser
 browser = Watir::Browser.new :firefox
 browser.goto "http://translate.google.com/"
  
