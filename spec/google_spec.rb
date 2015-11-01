@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe "Google translate" do
-	before(:all) do
-		@browser = Watir::Browser.new :firefox
-	end  
-
 	it "Go to google translate page" do
 		@browser.goto "http://translate.google.com/"		
 	end
@@ -31,9 +27,5 @@ describe "Google translate" do
 	end
 	it "Display text from results box" do
 		puts $result_box.text
-	end
-
-	after(:all) do
-		@browser.close
 	end
 end
