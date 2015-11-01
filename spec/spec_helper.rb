@@ -9,13 +9,13 @@ require_rel 'pages'
 RSpec.configure do |config|
 	config.include PageObject::PageFactory
 
-	config.before do
+	config.before(:all) do
 		@browser = Watir::Browser.new :firefox
 		@browser.window.resize_to 1200, 850
-		@browser.windows.move_to 0, 0
+		@browser.window.move_to 0, 0
 	end
 
-	config.after do
+	config.after(:all) do
 		@browser.close
 	end
 end
